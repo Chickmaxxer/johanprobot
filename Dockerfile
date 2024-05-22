@@ -69,7 +69,7 @@ RUN git clone -b shiken https://github.com/HuntingBots/AsunaRobot /root/AsunaRob
 WORKDIR /root/AsunaRobot
 
 #Copy config file to /root/AsunaRobot/AsunaRobot
-COPY ./AsunaRobot/sample_config.py ./AsunaRobot/config.py* /root/AsunaRobot/AsunaRobot/
+COPY ./AsunaRobot/sample_config.py ./johanprobot/config.py* /root/johanprobot/johanprobot/
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -77,4 +77,4 @@ ENV PATH="/home/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3","-m","AsunaRobot"]
+CMD ["python3","-m","johanprobot"]
